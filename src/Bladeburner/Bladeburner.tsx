@@ -229,7 +229,6 @@ export class Bladeburner implements IBladeburner {
         break;
       default:
         throw new Error("Invalid Action Type in startAction(Bladeburner,player, ): " + actionId.type);
-        break;
     }
   }
 
@@ -317,10 +316,8 @@ export class Bladeburner implements IBladeburner {
         if (this.contracts.hasOwnProperty(name)) {
           action.name = name;
           return action;
-        } else {
-          return null;
         }
-        break;
+        return null;
       case "operation":
       case "operations":
       case "op":
@@ -329,10 +326,8 @@ export class Bladeburner implements IBladeburner {
         if (this.operations.hasOwnProperty(name)) {
           action.name = name;
           return action;
-        } else {
-          return null;
         }
-        break;
+        return null;
       case "blackoperation":
       case "black operation":
       case "black operations":
@@ -344,10 +339,8 @@ export class Bladeburner implements IBladeburner {
         if (BlackOperations.hasOwnProperty(name)) {
           action.name = name;
           return action;
-        } else {
-          return null;
         }
-        break;
+        return null;
       case "general":
       case "general action":
       case "gen":

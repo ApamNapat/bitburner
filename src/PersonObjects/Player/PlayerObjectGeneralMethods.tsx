@@ -2602,7 +2602,6 @@ export function gainCodingContractReward(this: IPlayer, reward: ICodingContractR
         Factions[facName].playerReputation += gainPerFaction;
       }
       return `Gained ${gainPerFaction} reputation for each of the following factions: ${factions.toString()}`;
-      break;
     case CodingContractRewardType.CompanyReputation: {
       if (reward.name == null || !(Companies[reward.name] instanceof Company)) {
         //If no/invalid company was designated, just give rewards to all factions
